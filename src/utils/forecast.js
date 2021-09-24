@@ -11,9 +11,11 @@ const forecast = (latitude, longitude ,callback) => {
         }else{
             const temperature = body.current.temperature;
             const rainChance = body.current.precip;
+            const humidity = body.current.humidity;
             callback(undefined, {
                 temperature: temperature,
-                rainChance: rainChance
+                rainChance: rainChance,
+                humidity: humidity
             })
         }
     })
